@@ -4,6 +4,8 @@ import sqlite
 import sys
 
 database = "/rbiops/share/portcheck.db"
+#database = "/home/jkleiner/portcheck.db"
+
 #For future reference: CREATE TABLE endpoints ( description text, address text, port integer, PRIMARY KEY (description) );
 
 OPEN = '\33[94m'
