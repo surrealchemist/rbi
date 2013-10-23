@@ -8,15 +8,16 @@ database = "/rbiops/share/portcheck.db"
 
 OPEN = '\33[94m'
 CLOSED = '\33[31m'
+ENDFORMAT = '\033[0m'
 
 def portcheck(description,address,port):
 	s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 	result = s.connect_ex(( address , int(port)))
 
 	if(result == 0) :
-		print OPEN + '%s socket is open: Host %s Port %s\033[0m' % (description, address, port)
+		print '%s%-25s Host %-30s Port %7s Socket is open%s' % (OPEN, description, address, port, ENDFORMAT)
 	else :
-		print CLOSE + '%s socket is closed: Host %s Port %s\033[0m' % (description, address, port)
+		print '%s%-25s Host %-30s Port %7s Socket is closed%s' % (CLOSED, description, address, port, ENDFORMAT)
 	s.close()
 
 try:
