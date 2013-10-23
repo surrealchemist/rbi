@@ -11,7 +11,7 @@ def portcheck(description,address,port):
 	result = s.connect_ex(( address , int(port)))
 
 	if(result == 0) :
-    		print '%s socket is open: Host %s Port %s' % (description, address, port)
+		print '%s socket is open: Host %s Port %s' % (description, address, port)
 	else :
 		print '%s socket is closed: Host %s Port %s' % (description, address, port)
 	s.close()
