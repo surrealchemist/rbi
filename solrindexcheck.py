@@ -23,7 +23,7 @@ def getIndexInfo (solrAddress,port,index):
                 print "Server " + solrAddress + " " + index + " indexVersion: " + str(details['indexVersion'])
                 print ""
 	except:
-                print "Cannot reach server " + str(solrAddress) + ", check if the server is up \n"
+                print "Cannot reach server " + str(solrAddress) + ", verify options passed and check if the server is up \n"
 
 
  
