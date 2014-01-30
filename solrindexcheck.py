@@ -31,7 +31,7 @@ def getIndexInfo (solrAddress,port,index):
 if len(sys.argv) == 1:
 	print "Please provide a server URL or IP, port,  and the index you wish to check"
 	print "Example:"
-	print "solrindexcheck.py 192.168.1.1 myindex1"
+	print "solrindexcheck.py 192.168.1.1 8983 myindex1"
 elif len(sys.argv) > 4:
 	print "Please provide only 3 arguments (URL/IP and the index to check)"
 	print "Example:"
